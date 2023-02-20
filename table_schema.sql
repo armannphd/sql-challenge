@@ -7,8 +7,6 @@ DROP TABLE dept_emp CASCADE;
 DROP TABLE dept_manager CASCADE;
 DROP TABLE salaries CASCADE;
 
-
-
 -- Create a departments table
 CREATE TABLE departments (
 	dept_no VARCHAR NOT NULL,
