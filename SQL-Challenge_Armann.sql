@@ -1,11 +1,13 @@
 -- remove any existing tables
 
 DROP TABLE departments CASCADE;
+DROP TABLE titles CASCADE;
 DROP TABLE employees CASCADE;
 DROP TABLE dept_emp CASCADE;
 DROP TABLE dept_manager CASCADE;
 DROP TABLE salaries CASCADE;
-DROP TABLE titles CASCADE;
+
+
 
 -- Create a departments table
 CREATE TABLE departments (
@@ -16,15 +18,24 @@ CREATE TABLE departments (
 
 SELECT * FROM departments;
 
+-- Create a titles table
+CREATE TABLE titles(
+	title_id VARCHAR NOT NULL,
+	title VARCHAR NOT NULL,
+	PRIMARY KEY (title_id)
+);
+
+SELECT * FROM titles;
+
 -- Create a employees table
 CREATE TABLE employees(
 	emp_no INT NOT NULL,
 	emp_title_id VARCHAR NOT NULL,
-	birth_date VARCHAR NOT NULL,
+	birth_date DATE NOT NULL DEFAULT CURRENT_DATE,
 	first_name VARCHAR NOT NULL,
 	last_name VARCHAR NOT NULL,
 	sex VARCHAR NOT NULL,
-	hire_date VARCHAR NOT NULL,
+	hire_date DATE NOT NULL DEFAULT CURRENT_DATE,
 	PRIMARY KEY (emp_no),
 	FOREIGN KEY (emp_title_id) REFERENCES titles(title_id)
 );
@@ -60,11 +71,25 @@ CREATE TABLE salaries(
 
 SELECT * FROM salaries;
 
--- Create a titles table
-CREATE TABLE titles(
-	title_id VARCHAR NOT NULL,
-	title VARCHAR NOT NULL,
-	PRIMARY KEY (title_id)
-);
+-- List the employee number, last name, first name, sex, 
+-- and salary of each employee
+SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary
+FROM employees e
+INNER JOIN salaries s ON
+e.emp_no=s.emp_no;
 
-SELECT * FROM titles;
+-- List the first name, last name, and hire date
+-- for the employees who were hired in 1986 
+SELECT e.first_name, e.last_name, e.hire_date 
+FROM employees e
+WHERE hire_date BETWEEN to_date('1986-01-01','YYYY-MM-DD') 
+                    AND to_date('1986-12-31','YYYY-MM-DD');
+					
+
+					
+					
+
+
+
+
+
