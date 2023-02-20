@@ -9,5 +9,5 @@
 
 # Below are snippets of what each table should appear as (tables were limited to a max of the first ten rows).
 
-[09_challenge.pdf](https://github.com/armannphd/sql-challenge/files/10787393/09_challenge.pdf)
+![Screenshot 2023-02-20 at 11 42 45 AM](https://user-images.githubusercontent.com/115322974/220187481-1cd65d00-fa21-4259-88a5-66261578c0a3.png)
 
