@@ -7,7 +7,7 @@ Shown below is a pic of the expected ERD.png file
 Below are snippets of what each table should appear as (tables were limited to a max of the first ten rows).
 
 
-Departements table:
+## Departements table:
 ![Screenshot 2023-02-19 at 8 32 45 PM](https://user-images.githubusercontent.com/115322974/220010488-6f28c83e-4e1b-43dd-9fb3-36a4043a96a7.png)
 
 
