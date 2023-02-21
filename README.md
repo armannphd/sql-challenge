@@ -11,3 +11,7 @@
 
 ![Screenshot 2023-02-20 at 11 42 45 AM](https://user-images.githubusercontent.com/115322974/220187481-1cd65d00-fa21-4259-88a5-66261578c0a3.png)
 
+# Below are snippets of what each query should appear as (queries were limited to a max of the first ten rows).
+
+
+
